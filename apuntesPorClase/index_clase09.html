@@ -1,0 +1,21 @@
+<!-- Utilizaremos BEM para nombrar las clases. -->
+<!-- Ya que el <header> es único en este proyecto, no es necesario agregarle una clase, sino que se puede utilizar la etiqueta
+    directamente para crear estilos. -->
+<header>
+    <!-- Ya que solo tendré una imagen en el <header> no es necesario agregar una clase, ya que utilizando la especificidad, puede indicar directamente a la etiqueta <img> -->
+    <img src="./assets/img/logo.svg" alt="">
+    <!-- RECORDAR: los <div> son etiquetas comodín que utilizamos cuando no tenemos ninguna otra etiqueta que semanticamente nos diga donde estamos. SON SOLO ETIQUETAS DE APOYO.  -->
+    <!-- Realizare un cambio en el código, el profesor utiliza dos guiones medios para separar el nombre del bloque principal del
+    elemento, pero en otros cursos utilizan un doble guion bajo para separarlos, y para mi es mas fácil de entenderlo asi. -->
+    <div class="header--title-container">
+        <h1>La próxima revolución en el intercambio de criptomonedas</h1>
+        <p>Batatabit te ayuda a navegar entre los diferentes precios y tendencias</p>
+        <!-- Se le agrega una clase al botón ya que puede ser especial y deferente a los demás. -->
+        <a href="" class="header--button">Conoce Nuestros Planes <span>i</span> </a>
+    </div>
+</header>
+
+<!--  
+    Ya que el proyecto esta siendo desarrollado con el patron Mobile First, se deben a comenzar a crear los estilos teniendo la vista del index en una resolución
+    como si fuera un dispositivo móvil (Se recomienda una resolución lo mas cercana a 320px de ancho posible.)
+-->
