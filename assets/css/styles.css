@@ -41,42 +41,42 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-width: 320px;
-    height: 334px;
+    min-width: 32rem;
+    height: 33.4rem;
     text-align: center;
-    background: linear-gradient(208.83deg, #201e1c 16.69%, #f7931a 100%);
+    background: linear-gradient(208.83deg, var(--black) 16.69%, var(--bitcoin-orange) 100%);
     /* Se crea una gradiente que tendrá 3 valores, 
     el primero los grados desde donde comenzara a calcularse la gradiente, 
     el segundo sera el primer color y el porcentaje que ocupara, 
     el tercero sera el segundo color y el porcentaje que ocupara. */
 }
 header img {
-    width: 150px;
-    height: 24px;
-    margin-top: 60px;
+    width: 15rem;
+    height: 2.4rem;
+    margin-top: 6rem;
     align-self: center; /* Funciona solo si el contenedor padre es de tipo flex. */
 
 }
 .header__title-container {
     width: 90%;
-    min-width: 288px; /* No se achicara menos de 288 pixeles. */
-    max-width: 900px; /* No se agrandara mas de 900 pixeles. */
-    margin-top: 40px;
+    min-width: 28.8rem; /* No se achicara menos de 288 pixeles. */
+    max-width: 90rem; /* No se agrandara mas de 900 pixeles. */
+    margin-top: 4rem;
     text-align: center;
     align-self: center;
 }
 .header__title-container h1 {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: bold;
-    line-height: 26px; /* Altura de cada linea de texto, es mas conocido como interlineado. */
-    color: #fff;
+    line-height: 2.6rem; /* Altura de cada linea de texto, es mas conocido como interlineado. */
+    color: var(--just-white);
 }
 .header__title-container p {
-    margin-top: 25px;
-    font-size: 14px;
+    margin-top: 2.5rem;
+    font-size: 1.4rem;    
     font-weight: 500;
-    line-height: 18px;
-    color: #ffe9d5;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
 }
 .header__title-container .header__button {
     position: absolute; /* Si la posición es absoluta, puedo utilizar top, bottom, left y right para mover el contenido y 
@@ -86,31 +86,31 @@ header img {
     un 50% hacia el centro, pero como el botón es muy grande, se pasa de la mitad de la pantalla, asi que se le restan una 
     cantidad definida de pixeles, que serian mas o menos el tamaño del botón, para lograr centrarlo en el centro, esta es la
     mejor forma de centrar un elemento que tiene una posición absoluta. */
-    top: 270px;
+    top: 27rem;
     display: block;
-    margin-top: 35px;
-    padding: 15px;
-    width: 229px;
-    height: 48px;
-    background-color: #faf8f7;
+    margin-top: 3.5rem;
+    padding: 1.5rem;
+    width: 22.9rem;
+    height: 4.8rem;
+    background-color: var(--off-white);
 
     /* Sombra, es un estilo misceláneo, por eso va hasta el final de las reglas css de un elemento. */
     /* Los valores de rgba() son sacados directamente de figma, en caso de querer otro tipo de sombra se debe hablar con
     el diseñador. */
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
     border: none; /* le quito el borde. */
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-    color: #201e1c;
+    color: var(--black);
 }
 .header__button span {
     display: inline-block; /* Para que el span se pueda ver tengo que cambiar el valor inline que tiene por defecto a 
     inline-block. */
-    width: 13px;
-    height: 8px;
-    margin-left: 10px;
+    width: 1.3rem;
+    height: 0.8rem;
+    margin-left: 1rem;
     background-image: url('../icons/down-arrow.svg'); /* Debo salir de la carpeta css, para ello en la ruta agrego dos puntos 
     al principio. */
 }
