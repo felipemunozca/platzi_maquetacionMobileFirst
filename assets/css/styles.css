@@ -166,3 +166,40 @@ Las medidas de with, height, margin, padding se deben dejar en pixeles y no rem 
 del dispositivo, el diseño de descuadra por completo ya que se hizo con esas medidas exactas ya que son absolutas.
 Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a formato rem.
 */
+
+/* Estilos de la primera etiqueta <section>. */
+.main-currency-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+/* Como tendré dos tablas por un tema de especificidad y para evitar conflictos, es mejor colocar ambas clases al mismo tiempo. */
+.main-currency-table .currency-table__title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+}
+.currency-table__container {
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+.currency-table__container table {
+    width: 100%;
+    height: 100%;
+}
+.currency-table__container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
