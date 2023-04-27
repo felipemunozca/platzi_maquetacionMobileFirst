@@ -34,7 +34,7 @@ html {
     font-family: "DM Sans", sans-serif;
 }
 
-/* Estilos del header */
+/* Estilos de la etiqueta <header> */
 header {
     position: relative;
     display: flex;
@@ -113,4 +113,24 @@ header img {
     margin-left: 1rem;
     background-image: url('../icons/down-arrow.svg'); /* Debo salir de la carpeta css, para ello en la ruta agrego dos puntos 
     al principio. */
+}
+
+/* Estilos de la etiqueta <main>. */
+main {
+    width: 100%;
+    height: auto; /* La altura sera automática ya que el mismo contenido ira definiendo la altura final. */
+    background-color: var(--off-white);
+}
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.main-exchange-container__title {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    margin: 0 auto;
 }
