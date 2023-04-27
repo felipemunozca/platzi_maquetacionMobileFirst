@@ -134,3 +134,29 @@ main {
     max-width: 90rem;
     margin: 0 auto;
 }
+.main-exchange-container__img {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    background-image: url("../img/Bitcoin.svg");
+    /* También existen buenas practicas a la hora de utilizar imágenes, estas son: */
+    background-size: cover; /* Si los elementos empiezan a crecer, con esto se evita que se deforme la imagen. */
+    background-position: center; /* la imagen SIEMPRE se quedara en el centro. */
+    background-repeat: no-repeat; /* Si la imagen es mas chica que el contenedor, se puede repetir para cubrir todo 
+    el espacio, con esto se evita eso. */
+}
+.main-exchange-container h2 {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main-exchange-container p {
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575; /* Este color no esta guardado en una variable ya que se va a ocupar muy pocas veces. */
+}
