@@ -41,8 +41,8 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-width: 32rem;
-    height: 33.4rem;
+    min-width: 320px;
+    height: 334px;
     text-align: center;
     background: linear-gradient(208.83deg, var(--black) 16.69%, var(--bitcoin-orange) 100%);
     /* Se crea una gradiente que tendrá 3 valores, 
@@ -51,17 +51,17 @@ header {
     el tercero sera el segundo color y el porcentaje que ocupara. */
 }
 header img {
-    width: 15rem;
-    height: 2.4rem;
-    margin-top: 6rem;
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
     align-self: center; /* Funciona solo si el contenedor padre es de tipo flex. */
 
 }
 .header__title-container {
     width: 90%;
-    min-width: 28.8rem; /* No se achicara menos de 288 pixeles. */
-    max-width: 90rem; /* No se agrandara mas de 900 pixeles. */
-    margin-top: 4rem;
+    min-width: 288px; /* No se achicara menos de 288 pixeles. */
+    max-width: 900px; /* No se agrandara mas de 900 pixeles. */
+    margin-top: 40px;
     text-align: center;
     align-self: center;
 }
@@ -72,7 +72,7 @@ header img {
     color: var(--just-white);
 }
 .header__title-container p {
-    margin-top: 2.5rem;
+    margin-top: 25px;
     font-size: 1.4rem;    
     font-weight: 500;
     line-height: 1.8rem;
@@ -86,12 +86,12 @@ header img {
     un 50% hacia el centro, pero como el botón es muy grande, se pasa de la mitad de la pantalla, asi que se le restan una 
     cantidad definida de pixeles, que serian mas o menos el tamaño del botón, para lograr centrarlo en el centro, esta es la
     mejor forma de centrar un elemento que tiene una posición absoluta. */
-    top: 27rem;
+    top: 270px;
     display: block;
-    margin-top: 3.5rem;
-    padding: 1.5rem;
-    width: 22.9rem;
-    height: 4.8rem;
+    margin-top: 35px;
+    padding: 15px;
+    /* width: 229px; */
+    height: 48px;
     background-color: var(--off-white);
 
     /* Sombra, es un estilo misceláneo, por eso va hasta el final de las reglas css de un elemento. */
@@ -99,7 +99,7 @@ header img {
     el diseñador. */
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
     border: none; /* le quito el borde. */
-    border-radius: 0.5rem;
+    border-radius: 5px;
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
@@ -108,9 +108,9 @@ header img {
 .header__button span {
     display: inline-block; /* Para que el span se pueda ver tengo que cambiar el valor inline que tiene por defecto a 
     inline-block. */
-    width: 1.3rem;
-    height: 0.8rem;
-    margin-left: 1rem;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
     background-image: url('../icons/down-arrow.svg'); /* Debo salir de la carpeta css, para ello en la ruta agrego dos puntos 
     al principio. */
 }
@@ -124,19 +124,19 @@ main {
 .main-exchange-container {
     width: 100%;
     height: auto;
-    padding-top: 8rem;
-    padding-bottom: 3rem;
+    padding-top: 80px;
+    padding-bottom: 30px;
     text-align: center;
 }
 .main-exchange-container__title {
     width: 90%;
-    min-width: 28.8rem;
-    max-width: 90rem;
+    min-width: 288px;
+    max-width: 900ox;
     margin: 0 auto;
 }
 .main-exchange-container__img {
-    width: 20rem;
-    height: 20rem;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     margin-bottom: 5rem;
     background-image: url("../img/Bitcoin.svg");
@@ -147,16 +147,22 @@ main {
     el espacio, con esto se evita eso. */
 }
 .main-exchange-container h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
     font-size: 2.4rem;
     font-weight: bold;
     line-height: 2.6rem;
     color: var(--black);
 }
 .main-exchange-container p {
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.6rem;
     color: #757575; /* Este color no esta guardado en una variable ya que se va a ocupar muy pocas veces. */
 }
+/* 
+SE DEBE HACER UNA CORRECCIÓN IMPORTANTE.
+Las medidas de with, height, margin, padding se deben dejar en pixeles y no rem porque si se cambia el tamaño de la fuente 
+del dispositivo, el diseño de descuadra por completo ya que se hizo con esas medidas exactas ya que son absolutas.
+Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a formato rem.
+*/
