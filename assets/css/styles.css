@@ -7,7 +7,7 @@ Formas de ordenar los estilos CSS:
 5. Misceláneos u otros.
 */
 
-/* Variables */
+/**** Variables ****/
 :root {
     /* Colores */
     --bitcoin-orange: #f7931a;
@@ -21,20 +21,20 @@ Formas de ordenar los estilos CSS:
     --just-white: #fff;
 }
 
-/* Reiniciando estilos por defecto. */
+/**** Reiniciando estilos por defecto. ****/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Agregando la fuente de google fonts. */
+/**** Agregando la fuente de google fonts. ****/
 html {
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
 }
 
-/* Estilos de la etiqueta <header> */
+/**** Estilos de la etiqueta <header> ****/
 header {
     position: relative;
     display: flex;
@@ -115,7 +115,7 @@ header img {
     al principio. */
 }
 
-/* Estilos de la etiqueta <main>. */
+/**** Estilos de la etiqueta <main>. ****/
 main {
     width: 100%;
     height: auto; /* La altura sera automática ya que el mismo contenido ira definiendo la altura final. */
@@ -167,7 +167,7 @@ del dispositivo, el diseño de descuadra por completo ya que se hizo con esas me
 Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a formato rem.
 */
 
-/* Estilos de la primera etiqueta <section>. */
+/**** Estilos de la etiqueta <section> de intercambios. ****/
 .main-currency-table {
     width: 70%;
     min-width: 235px;
@@ -360,6 +360,51 @@ posición mediante la rotación.
     background-repeat: no-repeat;
     transform: rotate(90deg);
 }
+
+/**** Estilos de la etiqueta <section> de productos. ****/
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px; /* Es importante definir el tamaño mínimo de los contenedores en 320 pixeles ya que no hay teléfono 
+    mas pequeño que este. */
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+.product-detail__batata-logo {
+    position: absolute; /* La posición sera absoluta porque se debe colocar el icono entre dos contenedores. */
+    width: 40px;
+    height: 25px;
+    top: -10px; /* Al agregar el top con un valor negativo el icono sube y se posiciona entre los contenedores. */
+    left: calc(50% - 20px); /* Si solo coloco el 50%, el icono de la papa se centrara en el centro desde el inicio, eso hará 
+    que el icono se vea corrido, y ya que el tamaño es de 40 pixeles, le debo restar 20 pixeles que es la mitad para poder 
+    centrarlo en el medio. */
+    background-image: url('../icons/batata.svg');
+}
+.product-detail__title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.product-detail__title h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.product-detail__title p {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+
 /* Desafió Clase 17 
 Creo mi propia clase de CSS para ocultar elementos, en la vista móvil la segunda tabla no se vera.
 Mediante JavaScript se realizara un cambio agregando y removiendo clases de cada tabla.
