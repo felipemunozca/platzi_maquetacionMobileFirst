@@ -190,6 +190,9 @@ Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a
     max-width: 300px;
     height: 250px;
     margin: 0 auto;
+
+    display: flex;
+    align-items: center;
 }
 .currency-table__container table {
     width: 100%;
@@ -255,4 +258,130 @@ Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a
     font-weight: 300;
     line-height: 1.5rem;
     color: var(--warm-black);
+}
+/* Desafió clase 17 
+Creo mi propio botón de flecha, utilizando la flecha que apunta hacia abajo, y css para cambiar su
+posición mediante la rotación.
+*/
+.currency-table__container .arrow--right {
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+    background-image: url("../icons/down-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(270deg);
+}
+
+/* Desafió clase 17 
+Crear la tabla de de comisiones utilizando los estilos que se muestran en figma.
+Ademas agregar los botones de flecha para cambiar la tabla que se muestre al presionar el botón.
+*/
+.main-commission-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+.main-commission-table .commission-table__title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+}
+.commission-table__container {
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.commission-table__container table {
+    width: 100%;
+    height: 100%;
+}
+.commission-table__container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+    
+}
+.commission-table__container .table--top-left {
+    border-radius: 15px 0 0 0 ; 
+}
+.commission-table__container .table--top-right {
+    border-radius: 0 15px 0 0;
+}
+.commission-table__container .table--bottom-left {
+    border-radius: 0 0 0 15px;
+}
+.commission-table__container .table--bottom-right {
+    border-radius: 0 0 15px 0;
+}
+.commission-table__container .table--right {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+.commission-table__date {
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-blue);
+    border-radius: 8px;
+}
+.commission-table__date p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+/* Desafió clase 17 
+Creo mi propio botón de flecha, utilizando la flecha que apunta hacia abajo, y css para cambiar su
+posición mediante la rotación.
+*/
+.commission-table__container .arrow--left {
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    background-image: url("../icons/down-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+}
+/* Desafió Clase 17 
+Creo mi propia clase de CSS para ocultar elementos, en la vista móvil la segunda tabla no se vera.
+Mediante JavaScript se realizara un cambio agregando y removiendo clases de cada tabla.
+*/
+.d--none {
+    display: none;
+}
+
+/* Código media queries de practica, para probar alinear las dos tablas en una vista de escritorio. */
+@media (min-width: 800px) {
+    .main-tables-container {
+        display: flex;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .d--none {
+        display: block;
+    }
+    .arrow--right {
+        display: none;
+    }
+    .arrow--left {
+        display: none;
+    }
 }
