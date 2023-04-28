@@ -425,6 +425,43 @@ posición mediante la rotación.
     background-position: center;
     background-repeat: no-repeat;
 }
+/* Desafió clase 20
+Se deben agregar las demás tarjetas de la sección beneficio, junto a los iconos que corresponden a cada una.
+*/
+.product-detail__card .eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-image: url("../icons/eye.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-detail__card .dolar {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-image: url("../icons/dollar-sign.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-detail__card .check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-image: url("../icons/check-circle.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .product__card-title {
     margin-bottom: 15px;
     font-size: 1.8rem;
@@ -438,6 +475,7 @@ posición mediante la rotación.
     line-height: 1.8rem;
     color: #808080;
 }
+
 
 
 /* Desafió Clase 17 
