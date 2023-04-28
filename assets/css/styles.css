@@ -203,3 +203,41 @@ Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a
     color: var(--grey);
     background-color: var(--just-white);
 }
+.currency-table__container .table--top-left {
+    border-radius: 15px 0 0 0 ; /* Solo se redondea la esquina superior izquierda. */
+}
+.currency-table__container .table--top-right {
+    border-radius: 0 15px 0 0; /* Solo se redondea la esquina superior derecha. */
+}
+.currency-table__container .table--bottom-left {
+    border-radius: 0 0 0 15px; /* Solo se redondea la esquina inferior derecha */
+}
+.currency-table__container .table--bottom-right {
+    border-radius: 0 0 15px 0;
+}
+.currency-table__container .table--right {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+.currency-table__container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../icons/trending-down.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.currency-table__container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../icons/trending-up.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
