@@ -495,6 +495,34 @@ Se deben agregar las demás tarjetas de la sección beneficio, junto a los icono
     color: var(--just-white);
 }
 
+/**** Estilos de la etiqueta <section> planes. ****/
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.plans__title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.plans__title h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.plans__title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
 
 /* Desafió Clase 17 
 Creo mi propia clase de CSS para ocultar elementos, en la vista móvil la segunda tabla no se vera.
