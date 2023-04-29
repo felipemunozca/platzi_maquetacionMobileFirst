@@ -407,7 +407,7 @@ posición mediante la rotación.
     width: 90%;
     min-width: 288px;
     max-width: 400px;
-    height: 150px;
+    min-height: 150px;
     margin: 15px auto;
     padding: 15px;
     background-color: var(--warm-black);
@@ -476,6 +476,24 @@ Se deben agregar las demás tarjetas de la sección beneficio, junto a los icono
     color: #808080;
 }
 
+/**** Estilos de la etiqueta <section> comodín. ****/
+.bitcoin-img-container {
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url("../img/bitcoinbaby2x.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.bitcoin-img-container h2 {
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
 
 
 /* Desafió Clase 17 
