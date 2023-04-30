@@ -560,16 +560,39 @@ Se deben agregar las demás tarjetas de la sección beneficio, junto a los icono
     font-weight: bold;
     line-height: 5.3rem;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 .plan-card__price span {
     font-size: 1.2rem;
     font-weight: 300;
+    /* vertical-align: text-top; */
 }
 .plan-card__saving {
     font-size: 1.2rem;
     color: #757575;
 }
-
+.plan-card__call {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: var(--off-white);
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plan-card__call span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../icons/orange-right-arrow.svg");
+    vertical-align: text-bottom;
+}
 
 
 /* Desafió Clase 17 
