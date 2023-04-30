@@ -531,15 +531,14 @@ Se deben agregar las demás tarjetas de la sección beneficio, junto a los icono
     scroll-snap-type: x proximity;
     /* gap: 30px; */
 }
-
 .plans-container__card {
     position: relative;
     scroll-snap-align: center; /* propiedad para centrar en medio de la pantalla el contenido al cual estoy moviendo el scroll me lleve al centro del elemento. */
     width: 70%;
-    min-width: 230px;
+    min-width: 200px;
     max-width: 300px;
     height: 250px;
-    margin: 50px 30px 0;
+    margin: 50px 20px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
@@ -604,6 +603,32 @@ Se deben agregar las demás tarjetas de la sección beneficio, junto a los icono
     vertical-align: text-bottom;
 }
 
+/**** Estilos de la etiqueta <footer>. ****/
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.footer--left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.footer--left li {
+    margin: 10px 0;
+}
+.footer--left a {
+    text-decoration: none;
+    color: var(--just-white);
+}
 
 /* Desafió Clase 17 
 Creo mi propia clase de CSS para ocultar elementos, en la vista móvil la segunda tabla no se vera.
