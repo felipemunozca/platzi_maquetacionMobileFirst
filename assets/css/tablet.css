@@ -1,0 +1,15 @@
+/* Se crean media queries para dispositivos como tablets con una resolución igual o superior a 800 pixeles. */
+.main-tables-container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.d--none {
+    display: block;
+}
+.arrow--right {
+    display: none;
+}
+.arrow--left {
+    display: none;
+}

@@ -1,0 +1,11 @@
+/* Se crean media queries para dispositivos como computadores o notebook con una resolución igual o superior a 930 pixeles. */
+.product-cards__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    margin: 0 auto;
+}
+
+.plans-container__slider {
+    justify-content: center;
+}

@@ -538,7 +538,7 @@ Se deben agregar las demás tarjetas de la sección beneficio, junto a los icono
     min-width: 200px;
     max-width: 300px;
     height: 250px;
-    margin: 50px 20px 0;
+    margin: 40px 20px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
@@ -636,22 +636,4 @@ Mediante JavaScript se realizara un cambio agregando y removiendo clases de cada
 */
 .d--none {
     display: none;
-}
-
-/* Código media queries de practica, para probar alinear las dos tablas en una vista de escritorio. */
-@media (min-width: 800px) {
-    .main-tables-container {
-        display: flex;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    .d--none {
-        display: block;
-    }
-    .arrow--right {
-        display: none;
-    }
-    .arrow--left {
-        display: none;
-    }
 }
