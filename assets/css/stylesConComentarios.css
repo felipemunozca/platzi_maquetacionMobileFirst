@@ -1,5 +1,15 @@
+/*  
+Formas de ordenar los estilos CSS:
+1. Posicionamiento (fix, relative, absolute)
+2. Modelo de caja (Box model, padding, margin, width, height)
+3. Tipografía (fuente, tamaño, tipo)
+4. Efectos visuales (shadow-box, border-radius)
+5. Misceláneos u otros.
+*/
+
 /**** Variables ****/
 :root {
+    /* Colores */
     --bitcoin-orange: #f7931a;
     --soft-orange: #ffe9d5;
     --secondary-blue: #1a9af7;
@@ -35,17 +45,22 @@ header {
     height: 334px;
     text-align: center;
     background: linear-gradient(208.83deg, var(--black) 16.69%, var(--bitcoin-orange) 100%);
+    /* Se crea una gradiente que tendrá 3 valores, 
+    el primero los grados desde donde comenzara a calcularse la gradiente, 
+    el segundo sera el primer color y el porcentaje que ocupara, 
+    el tercero sera el segundo color y el porcentaje que ocupara. */
 }
 header img {
     width: 150px;
     height: 24px;
     margin-top: 60px;
-    align-self: center;
+    align-self: center; /* Funciona solo si el contenedor padre es de tipo flex. */
+
 }
 .header__title-container {
     width: 90%;
-    min-width: 288px;
-    max-width: 900px;
+    min-width: 288px; /* No se achicara menos de 288 pixeles. */
+    max-width: 900px; /* No se agrandara mas de 900 pixeles. */
     margin-top: 40px;
     text-align: center;
     align-self: center;
@@ -53,7 +68,7 @@ header img {
 .header__title-container h1 {
     font-size: 2.4rem;
     font-weight: bold;
-    line-height: 2.6rem;
+    line-height: 2.6rem; /* Altura de cada linea de texto, es mas conocido como interlineado. */
     color: var(--just-white);
 }
 .header__title-container p {
@@ -64,16 +79,26 @@ header img {
     color: var(--soft-orange);
 }
 .header__title-container .header__button {
-    position: absolute;
+    position: absolute; /* Si la posición es absoluta, puedo utilizar top, bottom, left y right para mover el contenido y 
+    fijarlo donde lo necesite. */
     left: calc(50% - 118px); 
+    /* calc es una función que nos ayuda a calcular dimensiones, en este caso, la regla es que desde la izquierda se mueva 
+    un 50% hacia el centro, pero como el botón es muy grande, se pasa de la mitad de la pantalla, asi que se le restan una 
+    cantidad definida de pixeles, que serian mas o menos el tamaño del botón, para lograr centrarlo en el centro, esta es la
+    mejor forma de centrar un elemento que tiene una posición absoluta. */
     top: 270px;
     display: block;
     margin-top: 35px;
     padding: 15px;
+    /* width: 229px; */
     height: 48px;
     background-color: var(--off-white);
+
+    /* Sombra, es un estilo misceláneo, por eso va hasta el final de las reglas css de un elemento. */
+    /* Los valores de rgba() son sacados directamente de figma, en caso de querer otro tipo de sombra se debe hablar con
+    el diseñador. */
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
-    border: none;
+    border: none; /* le quito el borde. */
     border-radius: 5px;
     font-size: 1.4rem;
     font-weight: bold;
@@ -81,17 +106,19 @@ header img {
     color: var(--black);
 }
 .header__button span {
-    display: inline-block;
+    display: inline-block; /* Para que el span se pueda ver tengo que cambiar el valor inline que tiene por defecto a 
+    inline-block. */
     width: 13px;
     height: 8px;
     margin-left: 10px;
-    background-image: url('../icons/down-arrow.svg');
+    background-image: url('../icons/down-arrow.svg'); /* Debo salir de la carpeta css, para ello en la ruta agrego dos puntos 
+    al principio. */
 }
 
 /**** Estilos de la etiqueta <main>. ****/
 main {
     width: 100%;
-    height: auto;
+    height: auto; /* La altura sera automática ya que el mismo contenido ira definiendo la altura final. */
     background-color: var(--off-white);
 }
 .main-exchange-container {
@@ -113,9 +140,11 @@ main {
     margin: 0 auto;
     margin-bottom: 5rem;
     background-image: url("../img/Bitcoin.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* También existen buenas practicas a la hora de utilizar imágenes, estas son: */
+    background-size: cover; /* Si los elementos empiezan a crecer, con esto se evita que se deforme la imagen. */
+    background-position: center; /* la imagen SIEMPRE se quedara en el centro. */
+    background-repeat: no-repeat; /* Si la imagen es mas chica que el contenedor, se puede repetir para cubrir todo 
+    el espacio, con esto se evita eso. */
 }
 .main-exchange-container h2 {
     margin-bottom: 30px;
@@ -129,8 +158,14 @@ main {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.6rem;
-    color: #757575;
+    color: #757575; /* Este color no esta guardado en una variable ya que se va a ocupar muy pocas veces. */
 }
+/* 
+SE DEBE HACER UNA CORRECCIÓN IMPORTANTE.
+Las medidas de with, height, margin, padding se deben dejar en pixeles y no rem porque si se cambia el tamaño de la fuente 
+del dispositivo, el diseño de descuadra por completo ya que se hizo con esas medidas exactas ya que son absolutas.
+Solo los estilos que tengan que ver con la fuente y los textos se debe cambiar a formato rem.
+*/
 
 /**** Estilos de la etiqueta <section> de intercambios. ****/
 .main-currency-table {
@@ -141,6 +176,7 @@ main {
     margin: 0 auto;
     font-family: "Inter", sans-serif;
 }
+/* Como tendré dos tablas por un tema de especificidad y para evitar conflictos, es mejor colocar ambas clases al mismo tiempo. */
 .main-currency-table .currency-table__title {
     margin-bottom: 15px;
     font-size: 1.8rem;
@@ -154,6 +190,7 @@ main {
     max-width: 300px;
     height: 250px;
     margin: 0 auto;
+
     display: flex;
     align-items: center;
 }
@@ -170,13 +207,13 @@ main {
     background-color: var(--just-white);
 }
 .currency-table__container .table--top-left {
-    border-radius: 15px 0 0 0 ;
+    border-radius: 15px 0 0 0 ; /* Solo se redondea la esquina superior izquierda. */
 }
 .currency-table__container .table--top-right {
-    border-radius: 0 15px 0 0;
+    border-radius: 0 15px 0 0; /* Solo se redondea la esquina superior derecha. */
 }
 .currency-table__container .table--bottom-left {
-    border-radius: 0 0 0 15px;
+    border-radius: 0 0 0 15px; /* Solo se redondea la esquina inferior derecha */
 }
 .currency-table__container .table--bottom-right {
     border-radius: 0 0 15px 0;
@@ -222,6 +259,10 @@ main {
     line-height: 1.5rem;
     color: var(--warm-black);
 }
+/* Desafió clase 17 
+Creo mi propio botón de flecha, utilizando la flecha que apunta hacia abajo, y css para cambiar su
+posición mediante la rotación.
+*/
 .currency-table__container .arrow--right {
     width: 15px;
     height: 15px;
@@ -231,6 +272,11 @@ main {
     background-repeat: no-repeat;
     transform: rotate(270deg);
 }
+
+/* Desafió clase 17 
+Crear la tabla de de comisiones utilizando los estilos que se muestran en figma.
+Ademas agregar los botones de flecha para cambiar la tabla que se muestre al presionar el botón.
+*/
 .main-commission-table {
     width: 70%;
     min-width: 235px;
@@ -266,6 +312,7 @@ main {
     line-height: 1.9rem;
     color: var(--grey);
     background-color: var(--just-white);
+    
 }
 .commission-table__container .table--top-left {
     border-radius: 15px 0 0 0 ; 
@@ -300,6 +347,10 @@ main {
     line-height: 1.5rem;
     color: var(--warm-black);
 }
+/* Desafió clase 17 
+Creo mi propio botón de flecha, utilizando la flecha que apunta hacia abajo, y css para cambiar su
+posición mediante la rotación.
+*/
 .commission-table__container .arrow--left {
     width: 15px;
     height: 15px;
@@ -314,17 +365,20 @@ main {
 .main-product-detail {
     position: relative;
     width: 100%;
-    min-width: 320px;
+    min-width: 320px; /* Es importante definir el tamaño mínimo de los contenedores en 320 pixeles ya que no hay teléfono 
+    mas pequeño que este. */
     height: auto;
     padding: 20px 10px;
     background-color: var(--black);
 }
 .product-detail__batata-logo {
-    position: absolute;
+    position: absolute; /* La posición sera absoluta porque se debe colocar el icono entre dos contenedores. */
     width: 40px;
     height: 25px;
-    top: -10px;
-    left: calc(50% - 20px);
+    top: -10px; /* Al agregar el top con un valor negativo el icono sube y se posiciona entre los contenedores. */
+    left: calc(50% - 20px); /* Si solo coloco el 50%, el icono de la papa se centrara en el centro desde el inicio, eso hará 
+    que el icono se vea corrido, y ya que el tamaño es de 40 pixeles, le debo restar 20 pixeles que es la mitad para poder 
+    centrarlo en el medio. */
     background-image: url('../icons/batata.svg');
 }
 .product-detail__title {
@@ -371,6 +425,9 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+/* Desafió clase 20
+Se deben agregar las demás tarjetas de la sección beneficio, junto a los iconos que corresponden a cada una.
+*/
 .product-detail__card .eye {
     display: inline-block;
     width: 20px;
@@ -404,6 +461,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .product__card-title {
     margin-bottom: 15px;
     font-size: 1.8rem;
@@ -468,13 +526,15 @@ main {
 .plans-container__slider {
     display: flex;
     height: 316px;
-    overflow-x: scroll;
+    overflow-x: scroll; /* Convierte todo el contenido que se esta desbordando en el overflow en una sección con un scroll que se mueve entre derecha e izquierda (eje X) */
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
+    /* gap: 30px; */
 }
 .plans-container__card {
     position: relative;
-    scroll-snap-align: center;
+    scroll-snap-align: center; /* propiedad para centrar en medio de la pantalla el contenido al cual estoy moviendo el scroll me lleve al centro del elemento. */
+    width: 70%;
     min-width: 200px;
     max-width: 300px;
     height: 250px;
@@ -516,6 +576,7 @@ main {
 .plan-card__price span {
     font-size: 1.2rem;
     font-weight: 300;
+    /* vertical-align: text-top; */
 }
 .plan-card__saving {
     font-size: 1.2rem;
@@ -569,7 +630,10 @@ footer section {
     color: var(--just-white);
 }
 
-
+/* Desafió Clase 17 
+Creo mi propia clase de CSS para ocultar elementos, en la vista móvil la segunda tabla no se vera.
+Mediante JavaScript se realizara un cambio agregando y removiendo clases de cada tabla.
+*/
 .d--none {
     display: none;
 }
